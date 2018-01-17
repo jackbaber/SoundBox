@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SoundBox</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
+</head>
+<body>
+
+<div id="container">
+
+  <div id="header">
+    <h1>SoundBox</h1>  
+  </div>
+
+  <div id="centralCircleContainer">
+    <div id="centralCircle">
+        <letter id="circleLetter">A</letter>
+        <span class="circleSound">Kick</span>
+    </div>
+  </div>
+
+  <div class="leftKeysContainer">
+      <div data-key="65" class="key">
+        <letter>A</letter>
+        <span class="sound">Kick</span>
+      </div>
+      <div data-key="83" class="key">
+        <letter>S</letter>
+        <span class="sound">Bass</span>
+      </div>
+      <div data-key="68" class="key">
+        <letter>D</letter>
+        <span class="sound">Strings</span>
+      </div>
+  </div>
+
+  <div class="rightKeysContainer">
+      <div data-key="74" class="key">
+        <letter>J</letter>
+        <span class="sound">Harp</span>
+      </div>
+      <div data-key="75" class="key">
+        <letter>K</letter>
+        <span class="sound">Hat</span>
+      </div>
+      <div data-key="76" class="key">
+        <letter>L</letter>
+        <span class="sound">Waves</span>
+      </div>
+  </div>
+
+  <div class="bottomKeysContainer">
+      <div data-key="70" class="key">
+        <letter>F</letter>
+        <span class="sound">Breath</span>
+      </div>
+      <div data-key="71" class="key">
+        <letter>G</letter>
+        <span class="sound">Adderal</span>
+      </div>
+      <div data-key="72" class="key">
+        <letter>H</letter>
+        <span class="sound">Barton</span>
+      </div>
+  </div>
+
+<!-- End of container -->
+</div> 
+
+  
+
+
+
+
+  <!-- Loops audio files  -->
+  <audio class="loop" data-key="81" src="sounds/StandingAlone.wav"></audio>
+  <audio class="loop" data-key="87" src="sounds/Synth.wav"></audio>
+  <audio class="loop" data-key="69" src="sounds/Lofiz.wav"></audio>
+  <audio class="loop" data-key="82" src="sounds/Break.wav"></audio>
+  <audio class="loop" data-key="84" src="sounds/Klank.wav"></audio>
+  <audio class="loop" data-key="89" src="sounds/Saucer.wav"></audio>
+  <audio class="loop" data-key="85" src="sounds/Pulse.wav"></audio>
+  <audio class="loop" data-key="73" src="sounds/Acorn.wav"></audio>
+  <audio class="loop" data-key="79" src="sounds/Hotboxed.wav"></audio>
+  <audio class="loop" data-key="80" src="sounds/Snares.wav"></audio>
+
+  <!-- One shots audio files -->
+  <audio class="oneShot" data-key="65" src="sounds/Kick.wav"></audio>
+  <audio class="oneShot" data-key="83" src="sounds/Bass.wav"></audio>
+  <audio class="oneShot" data-key="68" src="sounds/Strings.wav"></audio>
+  <audio class="oneShot" data-key="70" src="sounds/Breath.wav"></audio>
+  <audio class="oneShot" data-key="71" src="sounds/Adderal.wav"></audio>
+  <audio class="oneShot" data-key="72" src="sounds/Barton.wav"></audio>
+  <audio class="oneShot" data-key="74" src="sounds/Harp.wav"></audio>
+  <audio class="oneShot" data-key="75" src="sounds/Hat.wav"></audio>
+  <audio class="oneShot" data-key="76" src="sounds/Waves.wav"></audio>
+
+<script src="musicKit.js"></script>
+</body>
+</html>
