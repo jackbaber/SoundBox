@@ -9,9 +9,11 @@ body {
   grid-template-rows: auto;
   grid-template-areas: 
     ". . header . ."
+    ". backingTrackKeys backingTrackKeys backingTrackKeys ."
     ". leftKeys centralCircleSpace rightKeys ."
     ". leftKeys centralCircleSpace rightKeys ."
     ". . bottomKeys . ."
+    ". . . . ."
 }
 
 #header {
@@ -39,6 +41,15 @@ h1 {
   height: 300px;
   text-align: center;
   color: white;
+  line-height: 280px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.backingTrackKeysContainer {
+  display: flex;
+  grid-area: backingTrackKeys;
+  justify-self: center;
+  align-self: center;
 }
 
 .leftKeysContainer {
@@ -70,8 +81,6 @@ h1 {
   color: white;
   background: rgba(0,0,0,0.2);
   transition: all .07s ease;
-
-
 }
 
 letter { 
@@ -79,6 +88,18 @@ letter {
   font-size: 35px;
   padding-top: 18px;
 }
+
+.backingTrackKeysContainer .key {
+  width: 50px; 
+  height: 50px;
+  margin: 5px;
+}
+
+.backingTrackKeysContainer letter {
+  padding-top: 5px;
+}
+
+
 
 .sound {
   text-transform: uppercase;
@@ -88,15 +109,12 @@ letter {
 
 /* Styles for circle inner content */
 
-#circleLetter {
-  display: block;
-  font-size: 100px;
+.circleText {
+  font-size: 35px;
+  font-weight: bold;
+  font-style: italic;
 }
 
-#circleSounds {
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
 
 /* Pulse animation for when loop playing  */
 .loopPlaying {
@@ -108,14 +126,24 @@ letter {
 @keyframes pulse {
   from {
      border: 20px solid rgba(192, 192, 192, 1);
+     height: 300px;
+     width: 300px;
   }
   to {
      border: 25px solid rgba(192, 192, 192, 0.4);
+     height: 280px;
+     width: 280px;
   }
 }
 /* End of pulse animation for when loop playing */
 
 .oneShotPlaying {
+  transform: scale(1.1);
+  border-color: #893A4B;
+  box-shadow: 0 0 1rem white;
+}
+
+.trackSelected {
   transform: scale(1.1);
   border-color: #893A4B;
   box-shadow: 0 0 1rem white;
